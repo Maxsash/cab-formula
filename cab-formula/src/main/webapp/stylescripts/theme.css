@@ -1,0 +1,47 @@
+body {
+    height: 90vh;
+    width: 90vw;
+    background: url(../media/car_back.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.white-opaque {
+    background-color: rgba(166,211,160,0.8);
+    background-blend-mode: lighten;
+    border-style: solid;
+    border-radius: 50px;
+    border-color: white;
+}
+
+div.card {
+	max-width: 45rem;
+	min-width: 20rem;
+	margin-top: 2rem;
+	
+}
+
+div.card-deck {
+	align-items: center;
+	justify-content: center;
+	margin-top: 10%;
+	margin-left: 10%;
+}
+
+.card-img {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
