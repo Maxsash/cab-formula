@@ -20,7 +20,7 @@ public class BookingDaoImpl implements BookingDao {
 
 	@Override
 	public boolean persist(BookingBean booking) throws SQLException {
-		String sql = "insert into bookings values (seq_bookings.nextval,?,?,DATE ?,DATE ?,?,?,?,?,?,?,?,?,?,?,?)";
+		String sql = "insert into bookings values (seq_bookings.nextval,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 		Connection conn = null;
 		
 		try {
@@ -28,6 +28,7 @@ public class BookingDaoImpl implements BookingDao {
 			PreparedStatement stmt = conn.prepareStatement(sql);
 			stmt.setString(1, booking.getSource());
 			stmt.setString(2, booking.getDestination());
+			System.out.println(booking.getBook_date());
 			stmt.setString(3, booking.getBook_date());
 			stmt.setString(4, booking.getTrip_date());
 			stmt.setInt(5, booking.getDays());

@@ -45,6 +45,8 @@ public class ReviewController extends HttpServlet {
 			review.setDate((LocalDate.now().format(DateTimeFormatter.ofPattern("MM/dd/yyyy"))));
 			review.setReview(request.getParameter("review"));
 			review.setBook_id(Integer.parseInt(request.getParameter("book_id")));
+			
+			request.getRequestDispatcher("Init.cf").forward(request, response);
 		}
 	}
 
